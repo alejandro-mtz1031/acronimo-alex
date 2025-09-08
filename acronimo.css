@@ -1,0 +1,156 @@
+/* Resetear estilos del navegador */
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Declaramos variables personalizadas para nuestra paleta de colores */
+:root{
+    --color-principal-fondo: #000000;
+    --color-tarjetas: #1A1A1A;
+    --color-texto: #D5650A;
+    --color-botones: #D5650A; 
+    --color-botones-activados: #7A3A06;
+    --color-botones-hover: #6B3305;
+    --color-sombreados: #5C2C05;
+    /*--fuente-principal: "Arial", serif;*/
+    --fuente-principal: "Rancho", cursive;
+}
+
+body {
+    font-family: "Rancho", cursive;
+    background-color: var(--color-principal-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column; /* *Esto apila main y footer */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.container{
+    max-width: 800px; /*Este es el ancho máximo en pantallas grandes */
+    width: 100%;/* Ocupar todo el ancho disponible */
+}
+
+.page-header{
+    text-align: center;
+    margin-bottom: 5px;/* Crea espacio debajo de header */
+}
+
+h1{
+    font-size: 50px; /* Tamaño de fuente del título */
+   /* margin-bottom: 20px; */ /*Espaciado de 20px hacia abajo, para separarse de <p>*/
+}
+
+/* Selector descendiente. Seleccionamos el párrafo que está dentro de page-header */
+.page-header p{
+    margin-top: 30px;        
+}
+
+#subtitle{
+    font-family: var(--fuente-principal); /*uso variable de la fuente principal porque no he creado otra variable para subtituos */ /* AGREGAR NUEVA FUENTE */
+    color: var(--color-texto);
+    font-size: 1.5em;
+}
+
+
+/* Tarjeta */
+
+.container{
+    max-width: 1200px;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.acronimo-card img {
+    max-height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+
+.acronimo-card {
+  background-color: var(--color-tarjetas);
+    border: 1px solid black;
+    border-radius: 30px; /* Redondeado de las esquinas */
+    padding: 20px 40px; /* Espacio interno. Relleno */
+    margin: 40px auto;/* Espacio externo de la tarjeta */
+    /*box-shadow: 10px 5px 5px var(--color-texto); /* Sombreado de tarjeta */
+    /* Flexbox */
+    display: flex;/* Convierte nuestro contenedor en un contenedor flexible */
+    justify-content: space-around;
+    align-items: center;/* Alinea los elementos dentro del contenedor */
+    gap: 100px; /* Crear un espacio de 40px entre cada elemento */
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.acronimo-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 5px var(--color-sombreados);
+}
+
+h2{
+    font-size: 4em;
+}
+
+img{
+    max-width: 100%;
+    height: auto; /*Mantiene la proporción de la imagen al cambiar el ancho */
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+.btn-primary{
+    background-color: var(--color-botones);
+    font-size: 1.5em;
+    color: black;
+    border: black;
+    padding: 12px 50px;
+    border:  1px black;
+    border-radius: 10%;
+}
+
+.btn-primary:hover{
+    background-color: var(--color-botones-hover);
+    box-shadow: 0 0 15px 1px var(--color-botones-hover);
+}
+
+@media (max-width:768px){
+    .acronimo-card{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+}
+
+
+/**Letras A L E X*/
+.acronimo-card h2 {
+    font-size: 6em;
+}
+
+/**Palabras abajo de A L E X*/
+.acronimo-card p {
+    font-size: 2em;
+    font-style: normal;
+}
+
+#word-A{
+    color: #8A0000;
+}
+
+#word-L{
+    color: #000000;
+}
+
+#word-E{
+    color: #006458;
+}
+
+#word-X{
+    color: #622100;
+    font-size: 1.9em;
+}
